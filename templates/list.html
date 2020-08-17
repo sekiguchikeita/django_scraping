@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="jumbotron">
+   <div class="container">
+     <h1 class="display-4">News</h1>
+   </div>
+ </div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+<ul class="list-group list-group-flush">
+ <table border="2">
+   <tr>
+     <th>タイトル</th>
+     <th>URL</th>
+   </tr>
+   {% comment %} {% for post, post2 in list %}  {% endcomment %}
+   <tr>
+     <td>{{ soup_title }}</td>
+     {% comment %} <td><a href="{{ soup_title }}">{{ soup_title }}</a></td> {% endcomment %}
+   </tr>
+   {% comment %} {% endfor %} {% endcomment %}
+ </table>
+</ul>
+</div>  
+{% endblock content %}
