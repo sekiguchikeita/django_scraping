@@ -1,19 +1,32 @@
-{% extends 'base.html' %}
+<html lang="en">
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+     <title>Pachi Data</title>
+ </head>
+ <body>
 
-{% block header %}
 <div class="jumbotron">
    <div class="container">
      <h1 class="display-4">News</h1>
      <p class="lead">Enter the URL</p>
    </div>
  </div>
-{% endblock header %}
 
-{% block content %}
 <div class="container">
 <form action='' method='POST'>{% csrf_token %}
 <p>URL： <input type="text" name='url'></p>
 <input type="submit" value="取得する">
 </form>
 </div>
-{% endblock content %}
+
+<div>
+  {% for post1, post2, post3 in list %} 
+    <p>{{ post1 }}</p>
+    <p>{{ post2 }}</p>
+    <p>{{ post3 }}</p>
+  {% endfor %}
+</div>
+</html>

@@ -1,28 +1,18 @@
-{% extends 'base.html' %}
-
-{% block header %}
-<div class="jumbotron">
-   <div class="container">
-     <h1 class="display-4">News</h1>
-   </div>
- </div>
-{% endblock header %}
-
-{% block content %}
-<div class="container">
-<ul class="list-group list-group-flush">
- <table border="2">
-   <tr>
-     <th>タイトル</th>
-     <th>URL</th>
-   </tr>
-   {% comment %} {% for post, post2 in list %}  {% endcomment %}
-   <tr>
-     <td>{{ soup_title }}</td>
-     {% comment %} <td><a href="{{ soup_title }}">{{ soup_title }}</a></td> {% endcomment %}
-   </tr>
-   {% comment %} {% endfor %} {% endcomment %}
- </table>
-</ul>
-</div>  
-{% endblock content %}
+{% comment %} <html lang="en">
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <title>Pachi Data</title>
+ </head>
+ <body>
+  {% for post1, post2, post3 in list %} 
+    <p>{{ post1 }}</p>
+    <p>{{ post2 }}</p>
+    <p>{{ post3 }}</p>
+  {% endfor %}
+ </body>
+</html>
+ {% endcomment %}
