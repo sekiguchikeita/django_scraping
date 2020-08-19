@@ -10,7 +10,7 @@
 
 <div class="jumbotron">
    <div class="container">
-     <h1 class="display-4">News</h1>
+     <h1 class="display-4">スクレイピング</h1>
      <p class="lead">Enter the URL</p>
    </div>
  </div>
@@ -24,9 +24,12 @@
 
 <div>
   {% for post1, post2, post3 in list %} 
+  <h2>タイトル</h2>
     <p>{{ post1 }}</p>
+   <h2>説明</h2>
     <p>{{ post2 }}</p>
-    <p>{{ post3 }}</p>
+   <h2>サムネイル</h2>
+    <p><a href="{{ post3 }}"> {{ post3 }}</a></p>
   {% endfor %}
 </div>
 </html>

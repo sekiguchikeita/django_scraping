@@ -20,16 +20,16 @@ class Create(CreateView):
 
 # urlのHTMLを取得
 def listfunc(request):
-    # for post in News.objects.all():
-    #     url = post.url
-    #     print("aaa" + url)
-    #     list = []
+    for post in News.objects.all():
+        url = post.url
+        print("aaa" + url)
+        list = []
   
     # for post in News.objects.all():
-    url = request['url']
+    # url = request
     # print("aaa" + url)
     # print(request)
-    list = []
+    # list = []
     
 
     response = requests.get(url)
